@@ -1,0 +1,51 @@
+Default simulation time = 5 us
+   300 ns: 'producer'	wants to write 8 bytes.
+   300 ns: 'producer'	waiting until transaction is finished.
+
+  1100 ns: 'fifo' 8 words have been written: 0x 00 01 02 03 04 05 06 07 
+	Current status of 'fifo': write address: 8, read address: 0, fill level: 8
+	00 01 02 03 04 05 06 07 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+
+001100 ns: 'producer'	write confirmation coming.
+
+001200 ns: 'producer'	transaction finished successfully. 8 bytes were written.
+
+001200 ns: 'consumer'	wants to read 7 bytes.
+001200 ns: 'consumer'	waiting until transaction is finished.
+
+001300 ns: 'producer'	wants to write 10 bytes.
+001300 ns: 'producer'	waiting until transaction is finished.
+
+001900 ns: 'fifo' 7 words have been read: 0x 00 01 02 03 04 05 06 
+	Current status of 'fifo': write address: 8, read address: 7, fill level: 1
+	-- -- -- -- -- -- -- 07 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+
+001900 ns: 'producer'	write confirmation coming.
+
+000002 us: 'producer'	transaction finished successfully. 10 bytes were written.
+
+002100 ns: 'producer'	wants to write 4 bytes.
+002100 ns: 'producer'	waiting until transaction is finished.
+
+002300 ns: 'fifo' 4 words have been written: 0x 12 13 14 15 
+	Current status of 'fifo': write address: 12, read address: 7, fill level: 5
+	-- -- -- -- -- -- -- 07 12 13 14 15 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+
+002300 ns: 'producer'	write confirmation coming.
+
+002400 ns: 'producer'	transaction finished successfully. 4 bytes were written.
+
+003100 ns: 'producer'	wants to write 2 bytes.
+003100 ns: 'producer'	waiting until transaction is finished.
+
+003300 ns: 'fifo' 2 words have been written: 0x 16 17 
+	Current status of 'fifo': write address: 14, read address: 7, fill level: 7
+	-- -- -- -- -- -- -- 07 12 13 14 15 16 17 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+
+003300 ns: 'producer'	write confirmation coming.
+
+003400 ns: 'producer'	transaction finished successfully. 2 bytes were written.
+
+004100 ns: 'producer'	wants to write 16 bytes.
+004100 ns: 'producer'	waiting until transaction is finished.
+
